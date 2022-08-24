@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "6583360d-4c8b-43f1-b32f-9e380ee5c3cd",
+		"name": "Target Api 3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22980274"
+	},
+	"item": [
+		{
+			"name": "Add client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 100,\r\n  \"client_key\": \"alfika\",\r\n  \"client_secret\": \"alfika\",\r\n  \"status\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/client",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/client/100",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"client",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 101,\r\n  \"client_key\": \"alfika2\",\r\n  \"client_secret\": \"alfika2\",\r\n  \"status\": true\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/client/100",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"client",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/client/101",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"client",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://virtserver.swaggerhub.com/sepulsa/RentABook-API/1.0.0"
+		}
+	]
+}
